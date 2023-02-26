@@ -12,7 +12,7 @@ services:
   #   environment:
   #     DRONES_API_URL: "http://drones:5000"      
     ports:
-      - "5000:8002"
+      - "8002:5000"
   # mongo:
   #   image: mongo
   #   environment:
