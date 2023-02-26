@@ -1,12 +1,12 @@
 version: "3.4"
 
 services:
-  drone-manager:
-    build: ./drone-manager
+  drones-ingester:
+    build: ./drones-ingester
     env_file:
        - 'env'
-  drone-api:
-    build: ./drone-api
+  drones-api:
+    build: ./drones-api
     env_file:
       - 'env'
   #   environment:
