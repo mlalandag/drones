@@ -1,0 +1,22 @@
+version: "3.4"
+
+services:
+  drone-manager:
+    build: ./drone-manager
+    env_file:
+       - 'env'
+  drone-api:
+    build: ./drone-api
+    env_file:
+      - 'env'
+  #   environment:
+  #     DRONES_API_URL: "http://drones:5000"      
+    ports:
+      - "5000:8002"
+  # mongo:
+  #   image: mongo
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: mlalandag
+  #     MONGO_INITDB_ROOT_PASSWORD: mlalandag
+  #   volumes:
+  #     - mongodb:/data/db/
